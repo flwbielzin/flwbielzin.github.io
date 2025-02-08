@@ -216,6 +216,7 @@ footer iframe {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 html,
@@ -283,7 +284,7 @@ section {
 }
 
 #home .banner video {
-  display: none;
+  display: initial;
 }
 
 .banner {
@@ -303,8 +304,7 @@ section {
   object-fit: cover;
   width: 100%;
   height: 100vh;
-
-  filter: brightness(0.8);
+  filter: brightness(0.5);
 }
 
 .banner .content {
@@ -371,21 +371,22 @@ section {
   font-family: "Poppins", sans-serif;
   font-size: 6rem;
   font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 1px #ffffffe8;
-  text-stroke: 1px #ffffffc5;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(0, 109, 221, 0.2);
+  animation: pulseNeon 3s infinite;
+}
 
-  background: #cfcfcf;
-  background: radial-gradient(
-    circle farthest-corner at center center,
-    #cfcfcf17 0%,
-    #0000002d 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  line-height: 1;
-  text-align: center;
+@keyframes pulseNeon {
+  0%,
+  100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(0, 109, 221, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+      0 0 25px rgba(255, 255, 255, 0.4), 0 0 35px rgba(0, 109, 221, 0.3);
+  }
 }
 
 #home .content .arrow {
@@ -535,7 +536,7 @@ section {
 
 /* competencias=================== */
 #competencias {
-  background-color: #050505;
+  background: transparent !important;
   overflow: hidden;
 }
 
@@ -551,43 +552,49 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-
-  /* From https://css.glass */
-  background: rgba(39, 39, 39, 0.1);
-  backdrop-filter: blur(3.9px);
-  -webkit-backdrop-filter: blur(3.9px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 2rem;
-
   min-height: 30rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  box-shadow: 5px 5px 20px #000000;
+#competencias .cards .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
 #competencias .cards .card ion-icon {
   font-size: 6rem;
-  color: var(--color-text);
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 #competencias .cards .card span {
-  color: #d8d8d8;
+  color: white;
   font-weight: 700;
   font-size: 2rem;
   margin-top: -1rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 #competencias .cards .card p {
   font-family: "Poppins", sans-serif;
-  color: var(--p-color);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.6rem;
   font-weight: 300;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
 /* sobre =================== */
 #sobre {
-  position: absolute;
-  background-color: #050505;
+  position: relative;
+  background: transparent !important;
   overflow: hidden;
+  z-index: 1;
 }
 
 #sobre .image {
@@ -599,17 +606,17 @@ section {
   object-fit: cover;
   border-radius: 50%;
   width: 100%;
-
-  border-radius: 50%;
-  box-shadow: 19px 19px 30px #1818182d, -19px -19px 30px #2020201f;
-  filter: drop-shadow(0 0 10px #fff);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
   animation: move 3s ease-in-out infinite;
 }
 
 #sobre .content header h2 {
   font-size: 4rem;
-  color: var(--color-text);
+  color: white;
   text-align: left;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
 #sobre .content .text {
@@ -618,13 +625,17 @@ section {
 
 #sobre .content .text p {
   font-weight: 300;
-  color: #6e6e6e;
+  color: white;
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 #sobre .content .text p span {
   font-weight: 600;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+    0 0 25px rgba(255, 255, 255, 0.5);
 }
 
 #sobre .content .text ul {
@@ -639,53 +650,83 @@ section {
 
 #sobre .content .text ul li {
   font-size: 1.4rem;
-  color: #9b9b9b;
+  color: white;
   list-style: disc;
   font-weight: 400;
-
   font-family: "Poppins", sans-serif;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 #sobre .content .text a {
   text-decoration: none;
-  color: var(--color-text);
+  color: white;
 }
 
 #sobre .content .text a button {
   font-family: "Poppins", sans-serif;
-
   margin-top: 2rem;
-  border-radius: 1rem;
-  padding: 1rem 2rem;
-  background-color: transparent;
-  outline: 1px solid var(--color-text);
-  color: var(--color-text);
-  font-weight: 700;
-  border: none;
-
+  padding: 1.2rem 2.4rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
   display: flex;
-  gap: 1rem;
   align-items: center;
-  justify-content: center;
-
-  transition: all 200ms ease-in-out;
+  gap: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1),
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 #sobre .content .text a button:hover {
-  background-color: var(--color-text);
-  color: #111111;
-  box-shadow: 5px 5px 10px #000;
-  cursor: pointer;
-}
-
-#sobre .content .text a button:hover ion-icon {
-  color: #111111;
-  animation: moveicon 2s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+    0 0 25px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 #sobre .content .text a button ion-icon {
-  color: var(--color-text);
-  font-size: 2rem;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+#sobre .content .text a button:hover ion-icon {
+  transform: translateX(3px);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}
+
+/* Adicionar efeito de brilho ao passar o mouse */
+#sobre .content .text a button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+#sobre .content .text a button:hover::after {
+  opacity: 1;
+  left: 100%;
 }
 
 /* buttonWhatsapp =================== */
@@ -719,7 +760,9 @@ section {
 }
 
 section#competenciasDesktop {
-  display: none;
+  display: inherit;
+  overflow: hidden;
+  position: relative;
 }
 
 @media (min-width: 1300px) {
@@ -759,13 +802,27 @@ section#competenciasDesktop {
   }
 
   section#sobre {
-    background-color: #000;
+    position: relative;
+    background: transparent !important;
+    overflow: hidden;
+  }
+
+  section#sobre::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: -1;
   }
 
   section#sobre .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    background: transparent;
   }
 
   section#sobre .image img {
@@ -781,14 +838,7 @@ section#competenciasDesktop {
   }
 
   section#competencias {
-    display: none;
-  }
-
-  section#competenciasDesktop {
-    display: inherit;
-    overflow: hidden;
-
-    position: relative;
+    background: transparent !important;
   }
 
   section#competenciasDesktop img.textoHabilidades {
@@ -823,12 +873,9 @@ section#competenciasDesktop {
     justify-content: space-between;
 
     /* From https://css.glass */
-    background: rgba(61, 61, 61, 0.05);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1.9px);
-    -webkit-backdrop-filter: blur(1.9px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
     box-shadow: 6px 6px 30px #141414, -6px -6px 30px #0c0c0c;
   }
@@ -848,6 +895,10 @@ section#competenciasDesktop {
     font-family: "Poppins", sans-serif;
     color: #6e6e6e;
     font-size: 1.6rem;
+  }
+
+  body {
+    background: transparent !important;
   }
 }
 
@@ -869,7 +920,6 @@ footer iframe {
   max-width: 600px;
   border: none;
 }
-
 .audio-controls {
   position: fixed;
   top: 20px;
@@ -882,8 +932,8 @@ footer iframe {
   background: rgba(0, 0, 0, 0.2);
   padding: 5px;
   border-radius: 10px;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: auto;
@@ -907,7 +957,7 @@ footer iframe {
   padding: 5px;
   border: none;
   border-radius: 5px;
-  background: rgba(0, 83, 165, 0.3);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   cursor: pointer;
   transition: all 0.3s;
@@ -918,6 +968,7 @@ footer iframe {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .audio-buttons button:hover {
@@ -1005,6 +1056,82 @@ footer iframe {
     min-width: 180px;
     transform: scale(0.95);
   }
+
+  .banner video {
+    object-position: center;
+  }
+
+  #home .content .text h1 {
+    font-size: 4rem;
+  }
+
+  .nav-content ul li a {
+    font-size: 2.4rem;
+  }
+
+  .nav-content ul {
+    gap: 2rem;
+  }
+
+  .nav-content .social-links {
+    margin-top: 3rem;
+    gap: 2rem;
+  }
+
+  section#competenciasDesktop .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  section#competenciasDesktop header h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  section#competenciasDesktop .cards .card {
+    padding: 2rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+  }
+
+  section#competenciasDesktop .cards .card ion-icon {
+    font-size: 4rem;
+  }
+
+  section#competenciasDesktop .cards .card span {
+    font-size: 1.8rem;
+  }
+
+  section#competenciasDesktop .cards .card p {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  section#sobre .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  section#sobre .image img {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  section#projects .wrapper .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  section#projects .wrapper header h2 {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1013,4 +1140,34 @@ footer iframe {
     left: 10px;
     top: 10px;
   }
+
+  section#competenciasDesktop header h2 {
+    font-size: 2.5rem;
+  }
+
+  section#competenciasDesktop .cards .card {
+    padding: 1.5rem;
+  }
+
+  section#sobre .image img {
+    width: 80%;
+  }
+}
+
+/* Remover qualquer outro background que possa estar interferindo */
+.wrapper,
+.wrapper-home,
+section {
+  background: transparent !important;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
