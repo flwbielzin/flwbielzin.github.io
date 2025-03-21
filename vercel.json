@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/linktree",
+            "destination": "https://linktree-taupe.vercel.app"
+        }
+    ]
+}
