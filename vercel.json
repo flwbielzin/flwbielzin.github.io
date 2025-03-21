@@ -1,5 +1,8 @@
 {
   "rewrites": [
     { "source": "/linktree", "destination": "/linktree/index.html" }
+  ],
+  "routes": [
+    { "src": "/linktree/(.*)", "dest": "/linktree/$1" }
   ]
 }
