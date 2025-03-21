@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+  <meta name="google-site-verification" content="Rvr9ywhTxusq5m0WFMveeK9eRorR3HfAqGN5JjaawRI" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Links e redes sociais de Gabriel Oliveira - Desenvolvedor e Criador de Conteúdo">
+  <meta name="keywords" content="Gabriel Oliveira, desenvolvedor, portfolio, links, redes sociais">
+  <meta name="author" content="Gabriel Oliveira">
+  <meta name="theme-color" content="#121214">
+  <title>Gabriel Oliveira - Links</title>
+
+  <link rel="icon" href="./assets/logo sem fundo.png">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <header>
+    <div class="logo">Dev. flwbielzin</div>
+    <div class="header-controls">
+      <nav class="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#stats">Projetos</a>
+        <a href="mailto:flwbielzin@gmail.com">Contato</a>
+      </nav>
+      <button id="theme-toggle" onclick="toggleMode()">
+        <ion-icon name="moon-outline"></ion-icon>
+        <ion-icon name="sunny-outline"></ion-icon>
+      </button>
+    </div>
+  </header>
+
+  <div class="background-video">
+    <video id="dark-mode-video" class="video-bg" autoplay muted loop playsinline>
+      <source src="./assets/bg gb dark.mp4" type="video/mp4">
+    </video>
+    <video id="light-mode-video" class="video-bg" autoplay muted loop playsinline>
+      <source src="./assets/bg gb dark.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <div id="particles-js">
+  </div>
+
+  <main class="container">
+    <section class="profile-section">
+      <div class="profile-info">
+        <div class="info-item">
+          <h3>Nome:</h3>
+          <p>Gabriel Oliveira</p>
+        </div>
+        <div class="info-item">
+          <h3>Localização:</h3>
+          <p>Brasil</p>
+        </div>
+      </div>
+
+      <div class="profile-image">
+        <img src="./assets/foto gabriel oliveira.JPEG"
+          alt="Foto de Gabriel Oliveira sorrindo, desenvolvedor e criador de conteúdo" loading="lazy">
+      </div>
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/flwbielzin/" target="_blank" aria-label="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://github.com/flwbielzin" target="_blank" aria-label="GitHub">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://www.youtube.com/@flwbielzin" target="_blank" aria-label="YouTube">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <a href="https://twitter.com/flwbielzin" target="_blank" aria-label="Twitter">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+    </section>
+
+    <section class="content-section" id="home">
+      <div class="section-header">
+        <h2>Trazendo suas ideias à vida através da Programação</h2>
+      </div>
+
+      <div class="links-section">
+        <ul class="animated-links">
+          <li>
+            <a target="_blank" href="https://www.twitch.tv/flwbielzinn">
+              <ion-icon name="logo-twitch"></ion-icon>
+            </a>
+            <span class="link-title">Twitch.tv</span>
+          </li>
+
+          <li>
+            <a target="_blank" href="https://portfolioflwbielzin.netlify.app/">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </a>
+            <span class="link-title">Portfólio</span>
+          </li>
+
+          <li>
+            <a target="_blank" href="https://www.instagram.com/flwbielzin/">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <span class="link-title">Instagram</span>
+          </li>
+        </ul>
+
+        <div class="stats-section" id="stats">
+          <div class="stat-item">
+            <ion-icon name="time-outline"></ion-icon>
+            <h3>2+</h3>
+            <p>Anos de Experiência</p>
+          </div>
+          <div class="stat-item">
+            <ion-icon name="code-slash-outline"></ion-icon>
+            <h3>20+</h3>
+            <p>Projetos</p>
+          </div>
+          <div class="stat-item">
+            <ion-icon name="ribbon-outline"></ion-icon>
+            <h3>10+</h3>
+            <p>Certificações</p>
+          </div>
+        </div>
+
+        <div class="about-section" id="about">
+          <h2>Sobre</h2>
+          <p>
+            Sou estudante de Engenharia de Software, apaixonado por explorar e desenvolver soluções inovadoras através
+            da
+            tecnologia. Desde que iniciei minha jornada na programação, tenho buscado me aprofundar em diversas áreas,
+            com
+            foco no desenvolvimento web e automação.
+          </p>
+
+          <h3>Minhas principais habilidades incluem:</h3>
+          <ul>
+            <li>
+              <strong>Python:</strong> Automação de tarefas, scripts para web scraping e desenvolvimento de aplicações
+              web.
+            </li>
+            <li>
+              <strong>HTML, CSS e JavaScript:</strong> Criação de interfaces modernas e interativas para a web, com foco
+              em
+              usabilidade e performance.
+            </li>
+            <li>
+              <strong>Java:</strong> Desenvolvimento de aplicações robustas e orientadas a objetos.
+            </li>
+          </ul>
+
+          <p>
+            Atualmente, estou sempre aprendendo novas ferramentas e frameworks, participando de projetos que me desafiem
+            a
+            crescer como desenvolvedor.
+          </p>
+
+          <p>
+            Busco colaborar em projetos open source, contribuindo para a comunidade enquanto aprendo. Estou aberto a
+            novas
+            oportunidades e sempre disposto a compartilhar conhecimento e aprender com outros desenvolvedores.
+          </p>
+
+          <a href="#" class="cv-button">
+            <ion-icon name="document-text-outline"></ion-icon>
+            Ver Currículo Completo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="links-section" id="projects">
+      <!-- Existing content remains unchanged -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2024 Gabriel Oliveira | Desenvolvido por @flwbielzin 💻</p>
+    </div>
+  </footer>
+
+  <script src="particles.min.js"></script>
+  <script>
+    particlesJS(
+
+      {
+        "particles": {
+          "number": {
+            "value": 200,
+            "density": {
+              "enable": true,
+              "value_area": 800
+
+            }
+          },
+          "color": {
+            "value": "#fff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            },
+            "image": {
+              "src": "img/github.svg",
+              "width": 100,
+              "height": 100
+            }
+          },
+          "opacity": {
+            "value": .7,
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": .6,
+              "opacity_min": 0,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 4,
+              "size_min": 0.3,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": false,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 1,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 600
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "bubble"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "repulse"
+            },
+            "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 400,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 250,
+              "size": 0,
+              "duration": 2,
+              "opacity": 0,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 400,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
+      }
+    )
+
+    // Registrar o Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('Service Worker registrado com sucesso:', registration.scope);
+          })
+          .catch(error => {
+            console.log('Falha ao registrar o Service Worker:', error);
+          });
+      });
+    }
+
+    // Configuração do ScrollReveal
+    ScrollReveal().reveal('.profile-section', {
+      delay: 200,
+      distance: '50px',
+      origin: 'left'
+    });
+
+    ScrollReveal().reveal('.section-header', {
+      delay: 400,
+      distance: '50px',
+      origin: 'top'
+    });
+
+    ScrollReveal().reveal('.animated-links li', {
+      delay: 600,
+      distance: '50px',
+      origin: 'right',
+      interval: 200
+    });
+
+    ScrollReveal().reveal('.stats-section', {
+      delay: 1000,
+      distance: '50px',
+      origin: 'bottom'
+    });
+
+    ScrollReveal().reveal('.about-section', {
+      delay: 1200,
+      distance: '50px',
+      origin: 'bottom'
+    });
+
+    // Remover preloader após carregar
+    window.addEventListener('load', () => {
+      const preloader = document.querySelector('.preloader');
+      preloader.classList.add('fade-out');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 500);
+    });
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
