@@ -1,8 +1,9 @@
 {
     "rewrites": [
-        {
-            "source": "/linktree",
-            "destination": "https://linktree-taupe.vercel.app"
-        }
+      {
+        "source": "/linktree/(.*)",
+        "destination": "https://linktree-taupe.vercel.app/$1"
+      }
     ]
-}
+  }
+  
