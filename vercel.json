@@ -1,9 +1,9 @@
 {
-    "rewrites": [
-      {
-        "source": "/linktree/(.*)",
-        "destination": "https://linktree-taupe.vercel.app/$1"
-      }
-    ]
-  }
-  
+  "redirects": [
+    {
+      "source": "/linktree",
+      "destination": "https://linktree-taupe.vercel.app",
+      "permanent": true
+    }
+  ]
+}
