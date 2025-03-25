@@ -1,6 +1,9 @@
 {
-  "rewrites": [
-    { "source": "/linktree", "destination": "/linktree/index.html" },
-    { "source": "/linktree/(.*)", "destination": "/linktree/$1" }
+  "redirects": [
+    {
+      "source": "/portifolio",
+      "destination": "https://seu-vps-ou-outra-url",
+      "permanent": true
+    }
   ]
 }
